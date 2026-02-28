@@ -1,13 +1,13 @@
 terraform {
-  required_version = "~> 1.9.3"
+  required_version = ">= 1.9.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.49.0"
+      version = "~> 5.0"
     }
   }
   backend "s3" {
-    bucket         = "dev-aman-tf-bucket"
+    bucket         = "payroll-system-website"
     region         = "us-east-1"
     key            = "eks/terraform.tfstate"
     dynamodb_table = "Lock-Files"
